@@ -1,0 +1,75 @@
+.breadcrumb {
+    &-posi {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 4;
+        .breadcrumb-item {
+            &::before {
+                filter: brightness(0) invert(1);
+            }
+            a {
+                color: white;
+            }
+        }
+    }
+    .container {
+        overflow: hidden;
+    }
+    &-list {
+        @include flex;
+        align-items: center;
+        margin: 0 -2.4rem;
+        padding: 2.4rem 0;
+        position: relative;
+        @include max($res-container) {
+            padding: 1.6rem 0;
+        }
+        @include max($res-mobile) {
+            display: none;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            background-color: #E1E2E8;
+            left: 2.4rem;
+            right: 2.4rem;
+            height: 0.1rem;
+        }
+    }
+    &-item {
+        padding: 0 2.4rem;
+        position: relative;
+        &:not(:last-child) {
+            &::before {
+                content: '';
+                background-image: url(../assets/images/icon-arrow-breadcrumb.svg);
+                @include default-background;
+                background-size: contain;
+                height: 1.2rem;
+                width: 0.6rem;
+                position: absolute;
+                right: 0;
+                @include posi-vertical;
+            }
+        }
+        &:last-child {
+            a {
+                font-weight: 700;
+                color: $color-second;
+            }
+        }
+        &:hover {
+            a {
+                color: $color-second;
+            }
+        }
+        a {
+            @include fz-24-12;
+            color: $color-text;
+            @include transitionRe;
+        }
+    }
+}

@@ -1,0 +1,16 @@
+.partner {
+    &-img {
+        @include imgPd(22, 60);
+        img {
+            @include imgContain;
+        }
+    }
+    &-slider {
+        border-radius: 1rem;
+        background-color: white;
+        padding: 4.8rem;
+        @include max(768px) {
+            padding: 2.4rem;
+        }
+    }
+}

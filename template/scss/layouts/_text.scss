@@ -1,0 +1,220 @@
+.t-title {
+    @include fz-64;
+    line-height: 1.2;
+    font-weight: bold;
+    color: $color-pri;
+    @include max($mobile) {
+        font-size: 2.4rem;
+    }
+    &.white {
+        color: white;
+    }
+}
+
+.t-title-first {
+    @include fz-32;
+    color: $color-text;
+    font-weight: 500;
+    @include max($mobile) {
+        font-size: 1.4rem;
+    }
+    &.white {
+        color: white;
+    }
+}
+
+.t-title-second {
+    @include fz-54-20;
+    line-height: 1.2;
+    font-weight: bold;
+    color: $color-third;
+}
+
+.t-title-pro {
+    font-weight: bold;
+    color: $color-third;
+    text-align: center;
+    border-bottom: 1px solid #C4C6D2;
+    @include fz-40-24;
+    padding-bottom: 1.6rem;
+    margin-bottom: 1.6rem;
+    @include min(769px) {
+        font-weight: 600;
+        border-bottom: 1px solid #C4C6D2;
+        text-align: left;
+        padding-bottom: 2.4rem;
+        margin-bottom: 2.4rem;
+    }
+    &.line {
+        @include min(769px) {
+            position: relative;
+            text-align: center;
+            padding-bottom: 0;
+            margin-bottom: 2.4rem;
+            border-bottom: none;
+            overflow: hidden;
+            span {
+                display: block;
+                width: fit-content;
+                margin: 0 auto;
+                position: relative;
+                &::before,
+                &::after {
+                    content: '';
+                    position: absolute;
+                    height: 1px;
+                    background-color: #C4C6D2;
+                    width: 100vw;
+                    @include posi-vertical;
+                }
+                &::before {
+                    right: calc(100% + 1rem);
+                }
+                &::after {
+                    left: calc(100% + 1rem);
+                }
+            }
+        }
+    }
+    &.second {
+        @include min(1201px) {
+            span {
+                font-size: 6.4rem;
+                font-weight: bold;
+                color: $color-pri;
+            }
+        }
+    }
+}
+
+.t-center {
+    text-align: center;
+}
+
+.fw-1 {
+    font-weight: 100;
+}
+
+.fw-2 {
+    font-weight: 200;
+}
+
+.fw-3 {
+    font-weight: 300;
+}
+
+.fw-5 {
+    font-weight: 500;
+}
+
+.fw-6 {
+    font-weight: 600;
+}
+
+.fw-7 {
+    font-weight: 700;
+}
+
+.fw-8 {
+    font-weight: 800;
+}
+
+.fw-b {
+    font-weight: bold;
+}
+
+.fsi {
+    font-style: italic;
+}
+
+.t-up {
+    text-transform: uppercase;
+}
+
+.t9 {
+    @include fz-9
+}
+
+.t11 {
+    @include fz-11
+}
+
+.t12 {
+    @include fz-12
+}
+
+.t14 {
+    @include fz-14
+}
+
+.t16 {
+    @include fz-16
+}
+
+.t18 {
+    @include fz-18
+}
+
+.t24 {
+    @include fz-24
+}
+
+.t32 {
+    @include fz-32
+}
+
+.t40 {
+    @include fz-40
+}
+
+.t48 {
+    @include fz-48
+}
+
+.t56 {
+    @include fz-56
+}
+
+.t64 {
+    @include fz-64
+}
+
+.t72 {
+    @include fz-72
+}
+
+.t28-14 {
+    @include fz-28-14;
+}
+
+.t28-12 {
+    @include fz-28-12;
+}
+
+.t24-12 {
+    @include fz-24-12;
+}
+
+.t24-14 {
+    @include fz-24-14;
+}
+
+.t24-10 {
+    @include fz-24-10;
+}
+
+.t36-12 {
+    @include fz-36-12;
+}
+
+.t20-12 {
+    @include fz-20-12;
+}
+
+.t20-16 {
+    @include fz-20-16;
+}
+
+.t40-20 {
+    @include fz-40-20;
+}

@@ -1,0 +1,38 @@
+.nav {
+    margin-bottom: 2.4rem;
+    position: relative;
+    z-index: 10;
+    &-wrapper {
+        width: fit-content;
+        margin: 0 auto;
+        background-color: white;
+        border-radius: 5rem;
+        overflow: hidden;
+    }
+    &-list {
+        @include flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: -0.8rem;
+    }
+    &-item {
+        margin-bottom: 0.8rem;
+        &.active {
+            a {
+                border: 2px solid $color-A6B2F2;
+            }
+        }
+        a {
+            padding: 1.6rem 3.2rem;
+            border-radius: 4.5rem;
+            @include fz-24-10;
+            color: $color-text;
+            display: block;
+            white-space: nowrap;
+            @include max($res-mobile) {
+                padding: 0.8rem;
+            }
+        }
+    }
+}

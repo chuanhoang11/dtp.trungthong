@@ -1,0 +1,80 @@
+.btn {
+    @include flex;
+    align-items: center;
+    width: fit-content;
+    cursor: pointer;
+    padding: 1.2rem 2.4rem;
+    border-radius: 4.3rem;
+    background-color: transparent;
+    border: 2px solid $color-A6B2F2;
+    overflow: hidden;
+    position: relative;
+    @include max(768px) {
+        padding: 0.8rem 1.6rem;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+    }
+    .text {
+        @include fz-24-12;
+        line-height: 1.2;
+        color: $color-pri;
+        font-weight: 600;
+        white-space: nowrap;
+    }
+    .icon {
+        color: $color-A6B2F2;
+        width: initial !important;
+        height: initial !important;
+        margin-bottom: 0 !important;
+        @include max(768px) {
+            font-size: 1.6rem;
+        }
+        &-right {
+            margin-left: 4.8rem !important;
+            @include max(768px) {
+                margin-left: 0.8rem !important;
+            }
+        }
+    }
+    &.second {
+        background-color: $color-second;
+        border: none;
+        .text {
+            color: white;
+        }
+        .icon {
+            color: $color-FFDB41;
+        }
+    }
+    &.pri {
+        background-color: $color-pri;
+        border: none;
+        .text {
+            color: white;
+        }
+    }
+    &.second-bd {
+        border: 2px solid $color-second;
+    }
+    &-like {
+        color: $color-text;
+        @include flex;
+        align-items: center;
+        justify-content: center;
+        .icon {
+            width: 4.2rem;
+            height: 4.2rem;
+            margin-right: 1rem;
+            @include max(768px) {
+                width: 2.6rem;
+                height: 2.6rem;
+            }
+        }
+        .text {
+            @include fz-28-14;
+            text-decoration: underline;
+        }
+    }
+}

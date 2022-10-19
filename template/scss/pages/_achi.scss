@@ -1,0 +1,40 @@
+.achi {
+    &-slider {
+        .swiper {
+            &-slide {
+                width: 98rem !important;
+                @include max($res-mobile) {
+                    width: 70% !important;
+                }
+            }
+        }
+    }
+    &-wrap {
+        background-color: white;
+        box-shadow: 0 1rem 1rem rgba($color: #505977, $alpha: 0.15);
+        overflow: hidden;
+        border-radius: 2rem;
+        padding: 5rem;
+        @include max(768px) {
+            padding: 2.4rem;
+        }
+    }
+    &-img {
+        width: 35rem;
+        margin: 0 auto;
+        max-width: 100%;
+        margin-bottom: 5rem;
+        &-inner {
+            @include imgPd(468, 341);
+            img {
+                @include imgContain;
+            }
+        }
+    }
+    &-name {
+        @include fz-40-14;
+        font-weight: 600;
+        color: $color-pri;
+        text-align: center;
+    }
+}

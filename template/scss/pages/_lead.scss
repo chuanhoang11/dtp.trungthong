@@ -1,0 +1,80 @@
+.lead {
+    overflow: hidden;
+    &-slider {
+        .swiper {
+            padding: 2rem;
+            margin: -2rem;
+        }
+        .swiper-slide {
+            height: initial;
+        }
+    }
+    &-wrap {
+        height: 100%;
+        @include flex;
+        flex-direction: column;
+        border-radius: 2rem;
+        overflow: hidden;
+        box-shadow: 0 1rem 1rem rgba($color: #505977, $alpha: 0.1)
+    }
+    &-img {
+        @include imgPd(325, 515);
+        background-image: linear-gradient(26.21deg, #4b63e5 0%, #ced6ff 100%);
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            @include posi-horizontal;
+            background-image: url(../assets/images/banner-decor.svg);
+            @include default-background;
+            background-size: contain;
+            width: 90%;
+            padding-top: 9%;
+            z-index: 1;
+        }
+        &:hover {
+            img {
+                @include hover-scale;
+            }
+        }
+        img {
+            @include imgContain;
+            @include transitionRe;
+        }
+    }
+    &-content {
+        padding: 3.2rem;
+        text-align: center;
+        @include flex;
+        flex-direction: column;
+        height: 100%;
+        @include max($res-mobile) {
+            padding: 1.6rem
+        }
+    }
+    &-name {
+        @include fz-36-18;
+        font-weight: bold;
+        color: $color-pri;
+        &:hover {
+            a {
+                color: $color-second;
+            }
+        }
+        a {
+            color: $color-pri;
+        }
+    }
+    &-level {
+        @include fz-28-12;
+        margin-bottom: 2.4rem
+    }
+    &-des {
+        @include fz-28-12;
+        margin-bottom: 2.4rem;
+    }
+    .btn {
+        margin: 0 auto;
+        margin-top: auto;
+    }
+}

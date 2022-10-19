@@ -1,0 +1,190 @@
+.twe {
+    overflow: hidden;
+    &-slider {
+        .swiper {
+            padding: 14rem 0;
+            margin: -14rem 0;
+            &-slide {
+                height: initial;
+                &:nth-child(even) {
+                    .twe-wrap {
+                        &::before {
+                            height: 9.4rem;
+                            @include max(768px) {
+                                height: 4.8rem;
+                            }
+                        }
+                        &::after {
+                            top: calc(100% + 9.4rem);
+                            @include max(768px) {
+                                top: calc(100% + 4.8rem);
+                            }
+                        }
+                    }
+                }
+                &:nth-child(4n + 1) {
+                    .twe-wrap {
+                        border-bottom: 0.3rem solid $color-third;
+                        &::before {
+                            background-color: $color-third;
+                        }
+                        &::after {
+                            background-color: $color-third;
+                        }
+                        .btn {
+                            border: 2px solid $color-third;
+                        }
+                    }
+                    .twe-name {
+                        a {
+                            color: $color-third;
+                        }
+                    }
+                }
+                &:nth-child(4n + 2) {
+                    .twe-wrap {
+                        border-bottom: 0.3rem solid #006CB7;
+                        &::before {
+                            background-color: #006CB7;
+                        }
+                        &::after {
+                            background-color: #006CB7;
+                        }
+                        .btn {
+                            border: 2px solid #006CB7;
+                        }
+                    }
+                    .twe-name {
+                        a {
+                            color: #006CB7;
+                        }
+                    }
+                }
+                &:nth-child(4n + 3) {
+                    .twe-wrap {
+                        border-bottom: 0.3rem solid $color-second;
+                        &::before {
+                            background-color: $color-second;
+                        }
+                        &::after {
+                            background-color: $color-second;
+                        }
+                        .btn {
+                            border: 2px solid $color-second;
+                        }
+                    }
+                    .twe-name {
+                        a {
+                            color: $color-second;
+                        }
+                    }
+                }
+                &:nth-child(4n + 4) {
+                    .twe-wrap {
+                        border-bottom: 0.3rem solid #FAAD17;
+                        &::before {
+                            background-color: #FAAD17;
+                        }
+                        &::after {
+                            background-color: #FAAD17;
+                        }
+                        .btn {
+                            border: 2px solid #FAAD17;
+                        }
+                    }
+                    .twe-name {
+                        a {
+                            color: #FAAD17;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-wrap {
+        @include flex;
+        flex-direction: column;
+        height: 100%;
+        box-shadow: 0 0.5rem 1rem rgba($color: #505977, $alpha: 0.1);
+        border-radius: 2rem;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            @include posi-horizontal;
+            top: 100%;
+            height: 3.9rem;
+            width: 0.1rem;
+            background-color: $color-third;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            @include posi-horizontal;
+            width: 3.8rem;
+            height: 3.8rem;
+            border-radius: 100rem;
+            background-color: $color-third;
+            top: calc(100% + 3.9rem);
+            @include max(768px) {
+                width: 1.8rem;
+                height: 1.8rem;
+                height: 1.9rem
+            }
+        }
+    }
+    &-img {
+        @include imgPd(219, 390);
+        border-radius: 2rem 2rem 0 0;
+        &:hover {
+            img {
+                @include hover-scale;
+            }
+        }
+        img {
+            @include imgCover;
+            @include transitionRe;
+        }
+    }
+    &-content {
+        padding: 2rem;
+        @include flex;
+        flex-direction: column;
+        height: 100%;
+        @include max(768px) {
+            padding: 0.8rem;
+        }
+        .btn {
+            margin-top: auto
+        }
+    }
+    &-name {
+        @include fz-32-14;
+        font-weight: bold;
+        margin-bottom: 2.4rem;
+        @include max(768px) {
+            margin-bottom: 0.8rem;
+        }
+        a {
+            color: $color-text;
+        }
+    }
+    &-des {
+        @include fz-24-12;
+        @include lc(4);
+        margin-bottom: 2.4rem;
+        @include max(768px) {
+            margin-bottom: 0.8rem;
+        }
+    }
+    &-line {
+        height: 6.3rem;
+        width: 192rem;
+        margin-top: 5.4rem;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

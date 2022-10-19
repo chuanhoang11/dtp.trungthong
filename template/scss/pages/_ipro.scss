@@ -1,0 +1,130 @@
+.ipro {
+    overflow: hidden;
+    position: relative;
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+    &-side {
+        justify-content: space-between;
+        align-items: center;
+        &-left {
+            width: calc(100%*(5/12));
+            @include max(768px) {
+                width: 80%;
+                margin: 0 auto;
+                margin-bottom: 2.4rem;
+            }
+        }
+        &-right {
+            width: calc(100%*(6/12));
+            @include max(768px) {
+                width: 100%;
+            }
+        }
+    }
+    &-block {
+        &:nth-child(even) {
+            .ipro-side {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    &-name {
+        margin-bottom: 0.8rem;
+    }
+    &-img {
+        @include imgPd(100, 100);
+        &-decor {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            height: 78%;
+            .decor {
+                position: absolute;
+                border-radius: 100rem;
+            }
+            .decor-1 {
+                padding-top: 40%;
+                width: 40%;
+                left: 5%;
+                top: -10%;
+                background-image: linear-gradient(40.09deg, #7eb439 0%, rgba(126, 180, 57, 0.2) 100%);
+            }
+            .decor-2 {
+                width: 27%;
+                padding-top: 27%;
+                background-color: rgba($color: #FAAD17, $alpha: 0.7);
+                right: 0;
+                bottom: 5%;
+                z-index: 2;
+            }
+            img {
+                bottom: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                max-width: initial;
+                object-fit: contain;
+            }
+        }
+        &-inner {
+            width: calc(100%*(541/720));
+            position: absolute;
+            @include mid;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &-image {
+        @include imgPd(100, 100);
+        img {
+            @include imgContain;
+        }
+    }
+    &-content {
+        @include max(768px) {
+            text-align: center;
+        }
+        .btn {
+            @include max(768px) {
+                margin: 0 auto;
+                margin-top: 2.4rem;
+            }
+        }
+    }
+    &-cuved {
+        position: absolute;
+        pointer-events: none;
+        &-1 {
+            width: calc(100%*(745/ 1920));
+            @include posi-horizontal;
+            bottom: -15%;
+            @include max(768px) {
+                width: 160%;
+                bottom: -19%;
+            }
+            .ipro-cuved-inner {
+                @include imgPd(1317, 745);
+            }
+        }
+        img {
+            &:nth-child(1) {
+                @include max(768px) {
+                    display: none;
+                }
+            }
+            &:nth-child(2) {
+                @include min(769px) {
+                    display: none
+                }
+            }
+            @include imgCover;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="80" viewBox="0 0 64 80">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_279" data-name="Rectangle 279" width="64" height="80" transform="translate(0 -0.026)" fill="none" stroke="#144dcc" stroke-width="3"/>
+    </clipPath>
+  </defs>
+  <g id="Group_383" data-name="Group 383" transform="translate(0 0.026)" clip-path="url(#clip-path)">
+    <path id="Path_549" data-name="Path 549" d="M21.732,51.659V25.087a4.429,4.429,0,0,1,8.858,0V46.55" transform="translate(6.3 5.989)" fill="none" stroke="#144dcc" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_550" data-name="Path 550" d="M28.6,40.867V38.184a4.386,4.386,0,0,1,8.773,0v7.281" transform="translate(8.291 9.798)" fill="none" stroke="#144dcc" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_551" data-name="Path 551" d="M35.4,42.855V40.172a4.386,4.386,0,0,1,8.773,0v9.774" transform="translate(10.262 10.374)" fill="none" stroke="#144dcc" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_552" data-name="Path 552" d="M50.2,44.917V42.234a4.386,4.386,0,0,1,8.773,0V58.777a9.058,9.058,0,0,1-9.058,9.056H29.546a9.146,9.146,0,0,1-7.537-3.964l-2.674-3.888A26.877,26.877,0,0,1,14.6,44.747v-2.8a4.513,4.513,0,1,1,9.027,0v1.747" transform="translate(4.233 10.851)" fill="none" stroke="#144dcc" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_553" data-name="Path 553" d="M14.8,26.286a13.286,13.286,0,0,1,26.572,0" transform="translate(4.29 3.769)" fill="none" stroke="#144dcc" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+    <path id="Path_554" data-name="Path 554" d="M62.915,40.7V8.057c0-3.9-3.479-7.057-7.769-7.057H8.769C4.479,1,1,4.159,1,8.057V66.166c0,3.9,3.479,7.057,7.769,7.057h7.159" transform="translate(0.29 0.29)" fill="none" stroke="#144dcc" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>

@@ -1,0 +1,102 @@
+.intro {
+    overflow: hidden;
+    &.second {
+        .swiper-slide {
+            &:nth-child(3n + 1) {
+                .intro-name {
+                    color: $color-pri;
+                }
+            }
+            &:nth-child(3n + 2) {
+                .intro-name {
+                    color: $color-second;
+                }
+            }
+            &:nth-child(3n + 3) {
+                .intro-name {
+                    color: #FF803C;
+                }
+            }
+        }
+        .intro-wrap {
+            overflow: hidden;
+            &::after {
+                content: '';
+                position: absolute;
+                @include full-second;
+                background-image: url(../assets/images/intro-decor.svg);
+                @include default-background;
+                pointer-events: none;
+                border-radius: inherit;
+            }
+        }
+    }
+    &-slider {
+        .swiper {
+            padding: 8rem 2rem;
+            margin: -8rem -2rem;
+            &-slide {
+                height: initial;
+                width: 59rem !important;
+                opacity: 0;
+                @include transitionRe;
+                @include max(768px) {
+                    width: 29rem !important;
+                }
+                &-active {
+                    opacity: 1;
+                }
+                &-next {
+                    opacity: 1;
+                }
+                &-prev {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &-wrap {
+        min-height: 56.6rem;
+        text-align: center;
+        padding: 2.4rem 4.8rem;
+        box-shadow: 0 0.5rem 1rem rgba($color: #505977, $alpha: 0.15);
+        border-radius: 2rem;
+        height: 100%;
+        background-color: white;
+        @include flex;
+        flex-direction: column;
+        justify-content: center;
+        @include max($res-mobile) {
+            padding: 2.4rem;
+            min-height: initial;
+        }
+        .icon {
+            width: 10rem;
+            height: 10rem;
+            margin: 0 auto;
+            margin-bottom: 3.2rem;
+            @include max(768px) {
+                width: 5rem;
+                height: 5rem;
+                margin-bottom: 1.6rem
+            }
+        }
+    }
+    &-des {
+        @include fz-28-14;
+        margin-bottom: 4.8rem;
+        @include lc(4);
+    }
+    &-tag {
+        @include fz-24-12;
+        color: $color-third;
+    }
+    &-name {
+        @include fz-40-20;
+        font-weight: bold;
+        margin-bottom: 1.6rem;
+    }
+    .btn {
+        margin: 0 auto;
+    }
+}

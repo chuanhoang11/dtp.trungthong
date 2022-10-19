@@ -1,0 +1,236 @@
+.c-pri {
+    color: $color-pri;
+}
+
+.c-second {
+    color: $color-second;
+}
+
+.c-third {
+    color: $color-third;
+}
+
+.c-four {
+    color: $color-four;
+}
+
+.c-five {
+    color: $color-five;
+}
+
+.c-white {
+    color: white;
+}
+
+.c-black {
+    color: $color-black;
+}
+
+.bc-pri {
+    background-color: $color-pri;
+}
+
+.bc-second {
+    background-color: $color-second;
+}
+
+.bc-third {
+    background-color: $color-third;
+}
+
+.bc-four {
+    background-color: $color-four;
+}
+
+.bc-five {
+    background-color: $color-five;
+}
+
+.over-hd {
+    overflow: hidden;
+}
+
+.z-i-1 {
+    z-index: 1;
+}
+
+.z-i-2 {
+    z-index: 2;
+}
+
+.z-i-3 {
+    z-index: 3;
+}
+
+.z-i-4 {
+    z-index: 4;
+}
+
+.z-i-5 {
+    z-index: 5;
+}
+
+.swiper-pagination {
+    position: static;
+    &-bullet {
+        background-color: white;
+        border: 1px solid $color-border;
+        opacity: 1;
+        &-active {
+            background-color: $color-pri;
+        }
+    }
+}
+
+.swiper-prev,
+.swiper-next {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 100rem;
+    background-color: #4B63E5;
+    @include mid-flex;
+    cursor: pointer;
+    position: absolute;
+    @include posi-vertical;
+    @include transitionRe;
+    z-index: 4;
+    @include max($res-mobile) {
+        width: 2.8rem;
+        height: 2.8rem;
+    }
+    &:hover {
+        opacity: 0.9;
+    }
+    &.swiper-button-disabled {
+        background-color: #f5f5f5;
+        ;
+    }
+    i {
+        color: $color-white;
+        font-weight: 600;
+    }
+}
+
+.m-mid {
+    margin: 0 auto;
+}
+
+.m-end {
+    margin-left: auto;
+}
+
+.m-start {
+    margin-right: auto;
+}
+
+.f-mid {
+    @include mid-flex;
+}
+
+.f-end {
+    @include flex;
+    justify-content: flex-end;
+}
+
+.fl {
+    @include flex;
+}
+
+.fl-center {
+    @include flex;
+    align-items: center;
+}
+
+.f-space {
+    @include flex;
+    justify-content: space-between;
+}
+
+.icon-left {
+    margin-right: 0.8rem;
+}
+
+.icon-right {
+    margin-left: 0.8rem;
+}
+
+.spc {
+    &.no-wrap {
+        .spc-list {
+            flex-wrap: nowrap;
+        }
+    }
+    &-list {
+        @include flex;
+        align-items: stretch;
+        flex-wrap: wrap;
+        margin-left: -0.8rem;
+        margin-bottom: -0.8rem;
+    }
+    &-item {
+        margin-left: 0.8rem;
+        margin-bottom: 0.8rem;
+    }
+    &-16 {
+        .spc-list {
+            margin-left: -1.6rem;
+            margin-bottom: -1.6rem;
+        }
+        .spc-item {
+            margin-bottom: 1.6rem;
+            margin-left: 1.6rem;
+        }
+    }
+    &-24 {
+        .spc-list {
+            margin-left: -2.4rem;
+            margin-bottom: -2.4rem;
+        }
+        .spc-item {
+            margin-bottom: 2.4rem;
+            margin-left: 2.4rem;
+        }
+    }
+}
+
+.head {
+    margin-bottom: 4rem;
+    @include max($res-mobile) {
+        margin-bottom: 2.4rem;
+    }
+    .des {
+        @include fz-28-12;
+    }
+}
+
+.tabPanel {
+    display: none;
+    animation: fadeIn 0.6s ease-in-out;
+    &.open {
+        display: block;
+    }
+}
+
+a {
+    @include transitionRe;
+    &:hover {
+        color: $color-second;
+    }
+}
+
+.swiper-slide {
+    height: initial;
+}
+
+.swiper-pagination-progressbar {
+    background-color: #9BA1C3;
+    overflow: initial !important;
+    width: 70% !important;
+    margin: 0 auto;
+    height: 0.2rem !important;
+    margin-top: 4rem;
+    &-fill {
+        background: $color-second-light !important;
+        border-radius: 100rem;
+    }
+}

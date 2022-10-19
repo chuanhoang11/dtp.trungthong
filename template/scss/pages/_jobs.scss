@@ -1,0 +1,70 @@
+.jobs {
+    &-wrapper {
+        box-shadow: 0 1rem 2rem rgba($color: #505977, $alpha: 0.15);
+        border-radius: 2rem;
+        overflow: hidden;
+        background-color: white;
+        padding-right: 1.5rem;
+        @include max(600px) {
+            padding-right: 0;
+        }
+    }
+    &-side {
+        &-left {
+            width: calc(100%*(5/12));
+            @include max(600px) {
+                width: 100%;
+            }
+        }
+        &-right {
+            width: calc(100%*(7/12));
+            @include max(600px) {
+                width: 100%;
+            }
+        }
+    }
+    &-img {
+        height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &-content {
+        padding: 4.8rem 0;
+        margin-left: 6rem;
+        margin-right: 8.4rem;
+        @include max(900px) {
+            margin: 0;
+        }
+        @include flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        @include max(600px) {
+            padding: 2.4rem;
+        }
+    }
+    &-title {
+        @include fz-36-18;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-bottom: 2.4rem
+    }
+    &-des {
+        @include fz-24-12;
+        margin-bottom: 1.6rem;
+    }
+    &-form {
+        &-wrap {
+            position: relative;
+        }
+    }
+    .btn {
+        @include max(600px) {
+            margin: 0 auto;
+            margin-top: 2.4rem;
+        }
+    }
+}

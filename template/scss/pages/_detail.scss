@@ -1,0 +1,168 @@
+.detail {
+    &-side {
+        &-left {
+            width: calc(100%*(5/12));
+            @include max(600px) {
+                width: 100%;
+                margin-bottom: 3rem;
+            }
+        }
+        &-right {
+            width: calc(100%*(7/12));
+            @include max(600px) {
+                width: 100%;
+            }
+        }
+    }
+    .star {
+        justify-content: flex-start;
+        @include max(600px) {
+            justify-content: center;
+        }
+    }
+    .detail-content {
+        @include max(600px) {
+            text-align: center;
+        }
+        .pro-name {
+            font-weight: 500;
+            @include fz-40-20;
+        }
+        &-head {
+            padding-bottom: 2.4rem;
+            margin-bottom: 2.4rem;
+            border-bottom: 1px solid #C4C6D2;
+        }
+        .pro-des {
+            @include lc(0);
+            overflow: initial;
+            -webkit-line-clamp: 0 !important;
+            line-clamp: 0 !important;
+            display: block !important;
+        }
+        &-top {
+            margin-bottom: 3.2rem;
+        }
+        .t-title-pro.line {
+            color: $color-text;
+            span {
+                margin-left: 0;
+                &::before {
+                    display: none;
+                }
+            }
+        }
+        .spc {
+            &-list {
+                align-items: center;
+                @include max(600px) {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .pro {
+        background-color: transparent;
+        .star {
+            justify-content: center;
+        }
+    }
+    &-slider {
+        &-thumb {
+            position: relative;
+            margin-bottom: 4rem;
+            .swiper {
+                width: 90%;
+                margin: 0 auto;
+            }
+            .swiper-next {
+                right: -1rem;
+            }
+            .swiper-prev {
+                left: -1rem;
+            }
+            .pro-img {
+                &-inner {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    &-info {
+        &-list {
+            @include flex;
+            align-items: center;
+            justify-content: center;
+            li {
+                position: relative;
+                cursor: pointer;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background-color: white;
+                    transform: perspective(10px) rotateX(2deg) translateY(-1px);
+                    border-radius: 1rem 1rem 0 0;
+                    background-color: #003155;
+                    @include transition(0.1s, ease-in-out);
+                }
+                span {
+                    @include fz-24-14;
+                    color: $color-text;
+                    padding: 1.6rem;
+                    display: block;
+                    width: fit-content;
+                    position: relative;
+                    z-index: 2;
+                    color: white;
+                    font-weight: 400;
+                    @include transition(0.1s, ease-in-out);
+                    @include max($mobile) {
+                        padding: 0.8rem;
+                    }
+                }
+                &.active {
+                    &::after {
+                        background-color: white;
+                        z-index: 1;
+                    }
+                    span {
+                        color: $color-text;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+        &-wrapper {
+            padding: 5.6rem;
+            box-shadow: 0 1rem 2rem rgba($color: #505977, $alpha: 0.1);
+            border-radius: 2rem;
+            overflow: hidden;
+            background-color: white;
+            position: relative;
+            z-index: 4;
+            @include max(768px) {
+                padding: 2.4rem
+            }
+            @include max(400px) {
+                border-radius: 0.6rem
+            }
+        }
+        &-table {
+            td {
+                @include fz-24-12;
+                padding: 0.8rem 0;
+            }
+            table {
+                margin: 0 auto;
+                width: 50%;
+                @include max(1000px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+$color-pri: #0E48CB;
+$color-second: #7EB439;
+$color-second-light: #BDCC19;
+$color-third: #003D68;
+$color-four: #f05123;
+$color-five: #FF803C;
+$color-black: #000000;
+$color-white: #ffffff;
+$color-gray: #F7F7F7;
+$color-text: #565B74;
+$color-border: rgba(0, 0, 0, 0.1);
+$color-1A1E2E: #1A1E2E;
+$color-93A4E2: #93A4E2;
+$color-A6B2F2: #A6B2F2;
+$color-FFDB41: #FFDB41;
+//Responsive
+$res-mobile: 1200px;
+$res-mobile-min: 1201px;
+$res-container: 1680px;
+$mobile: 500px;
+//Distance
+$distance-header: 10rem;
+$distance-header-mobile: 5rem;
+$distance-header-sticky: 6rem;
+$distance-header-mobile-sticky: 5rem;
+$border-line: 1px solid rgba(0, 0, 0, 0.1);
+$radius: 0.6rem;

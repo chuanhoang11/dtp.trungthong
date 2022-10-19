@@ -1,0 +1,172 @@
+.road {
+    &-slider {
+        padding: 5.6rem;
+        background-color: white;
+        border-radius: 2rem;
+        box-shadow: 0 1rem 2rem rgba($color: #505977, $alpha: 0.1);
+        @include max(768px) {
+            padding: 1.6rem;
+        }
+        &-thumb {
+            margin-bottom: 4rem;
+            .swiper {
+                &-wrapper {
+                    align-items: center;
+                }
+                height: 12.4rem;
+                position: relative;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    height: 0.5rem;
+                    left: 0;
+                    @include posi-vertical;
+                    width: 100%;
+                    background-image: linear-gradient(to right, rgba($color: #9BA1C3, $alpha: 0.1) 0%, rgba($color: #9BA1C3, $alpha: 0.3) 10%, rgba($color: #9BA1C3, $alpha: 1) 30%, rgba($color: #9BA1C3, $alpha: 1) 50%, rgba($color: #9BA1C3, $alpha: 1) 75%, rgba($color: #9BA1C3, $alpha: 0.3) 90%, rgba($color: #9BA1C3, $alpha: 0.1) 100%);
+                }
+                &-slide {
+                    height: initial;
+                    &:nth-child(even) {
+                        .road-number {
+                            top: -4rem;
+                        }
+                        &.swiper-slide-thumb-active {
+                            .road-number {
+                                top: -2.5rem;
+                            }
+                        }
+                    }
+                    &:nth-child(odd) {
+                        .road-number {
+                            bottom: -4rem;
+                        }
+                        &.swiper-slide-thumb-active {
+                            .road-number {
+                                bottom: -2.5rem;
+                            }
+                        }
+                    }
+                    &-thumb-active {
+                        .road-number {
+                            padding: 0 1.6rem;
+                            border-radius: 4rem;
+                            background-color: $color-second;
+                            margin: 0 auto;
+                            @include fz-36-12;
+                            font-weight: bold;
+                            color: white;
+                            height: 5rem;
+                            @include mid-flex;
+                            text-align: center;
+                            &::after {
+                                opacity: 1;
+                            }
+                        }
+                        .road-dot {
+                            .dot {
+                                width: 0;
+                                height: 0;
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &-side {
+        &-left {
+            width: calc(100%*(5/12));
+            @include max(768px) {
+                width: 100%;
+                margin-bottom: 2.4rem;
+            }
+        }
+        &-right {
+            width: calc(100%*(7/12));
+            @include max(768px) {
+                width: 100%;
+            }
+        }
+    }
+    &-dot {
+        position: relative;
+        cursor: pointer;
+        .dot {
+            width: 2.8rem;
+            height: 2.8rem;
+            border-radius: 100rem;
+            background-color: #9BA1C3;
+            display: block;
+            margin: 0 auto;
+            border: 0.4rem solid white;
+            box-sizing: content-box;
+            @include max($mobile) {
+                width: 1.6rem;
+                height: 1.6rem;
+            }
+        }
+    }
+    &-number {
+        font-weight: 600;
+        @include fz-28-12;
+        white-space: nowrap;
+        position: absolute;
+        width: fit-content;
+        display: block;
+        @include posi-horizontal;
+        @include transition(0.4s, ease);
+        &:after {
+            content: '';
+            position: absolute;
+            @include posi-horizontal;
+            top: calc(100% - 0.1rem);
+            border-top: 1rem solid $color-second;
+            border-right: 1rem solid transparent;
+            border-bottom: 1rem solid transparent;
+            border-left: 1rem solid transparent;
+            @include transitionRe;
+            opacity: 0;
+        }
+    }
+    &-img {
+        @include imgPd(380, 516);
+        border-radius: 2rem;
+        img {
+            @include imgCover;
+        }
+    }
+    &-year {
+        @include fz-150-58;
+        font-weight: bold;
+        color: rgba($color: #0E48CB, $alpha: 0.2);
+        line-height: 1.1;
+        width: fit-content;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            height: 100%;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            background-image: linear-gradient(to top, #fff 0%, rgba($color: white, $alpha: 0.5) 30%, rgba($color: white, $alpha: 0.1) 100%);
+        }
+    }
+    &-text {
+        @include fz-24-12;
+        margin-bottom: 0.8rem;
+    }
+    &-content {
+        ul {
+            list-style: disc;
+            margin-left: 2.8rem;
+            li {
+                @include fz-24-12;
+                &:not(:last-child) {
+                    margin-bottom: 0.8rem;
+                }
+            }
+        }
+    }
+}
