@@ -171,6 +171,86 @@
             }
         }
     }
+    &.five {
+        .banner-slider {
+            height: initial;
+            min-height: calc(100vw *(700/ 1920));
+            .swiper {
+                min-height: inherit;
+            }
+            .swiper-wrapper {
+                min-height: inherit;
+            }
+            .swiper-slide {
+                min-height: inherit;
+            }
+        }
+        .banner-title {
+            color: white;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                height: 100%;
+                width: 0.8rem;
+                background-color: #FFEB52;
+                border-radius: 2rem;
+                left: -3rem;
+            }
+        }
+        .btn-back {
+            margin-bottom: 2.4rem;
+            @include max($res-mobile) {
+                display: none;
+            }
+        }
+        .banner-des {
+            color: white;
+            display: block;
+            overflow: visible;
+        }
+        .banner-wrap {
+            padding: 10rem 0;
+            min-height: inherit;
+            position: relative;
+            @include max(768px) {
+                padding: 4rem 0 0 0;
+            }
+        }
+        .banner-img {
+            @include min(769px) {
+                width: calc(100%*(840/ 1920));
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                @include flex;
+                flex-direction: column;
+                justify-content: flex-end;
+            }
+            &-inner {
+                @include imgPd(607, 895);
+                img {
+                    @include imgContain;
+                }
+            }
+        }
+        .banner-item {
+            &:nth-child(1) {
+                @include max(768px) {
+                    display: none;
+                }
+            }
+            @include max(768px) {
+                width: 100%;
+            }
+        }
+        .banner-content {
+            @include max(768px) {
+                display: none;
+            }
+        }
+    }
     .line {
         position: absolute;
         bottom: 0;
@@ -287,5 +367,19 @@
         @include flex;
         flex-direction: column;
         justify-content: center;
+        &.mobi {
+            text-align: center;
+            padding: 2rem 0;
+            @include min(769px) {
+                display: none;
+            }
+            .banner-title {
+                color: $color-pri !important;
+            }
+            .banner-des {
+                color: $color-text;
+                display: block;
+            }
+        }
     }
 }

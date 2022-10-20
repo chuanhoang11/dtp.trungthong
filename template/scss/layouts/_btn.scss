@@ -1,6 +1,8 @@
 .btn {
     @include flex;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     width: fit-content;
     cursor: pointer;
     padding: 1.2rem 2.4rem;
@@ -75,6 +77,46 @@
         .text {
             @include fz-28-14;
             text-decoration: underline;
+        }
+    }
+    &.blue {
+        .text {
+            color: $color-pri;
+        }
+    }
+    &.green {
+        border: 0.2rem solid $color-second;
+        .text {
+            color: $color-second;
+        }
+    }
+    &.orange {
+        border: 0.2rem solid #F7941E;
+        .text {
+            color: #F7941E;
+        }
+    }
+    &-back {
+        &.white {
+            border: 0.2rem solid white;
+            .text {
+                color: white;
+            }
+            .icon {
+                color: white;
+            }
+        }
+        &.posi {
+            position: absolute;
+            left: calc((100vw - 1650px) / 2);
+            top: 10rem;
+            z-index: 4;
+            @include max($res-container) {
+                left: 1.5rem;
+            }
+            @include max($res-mobile) {
+                top: 1.5rem;
+            }
         }
     }
 }

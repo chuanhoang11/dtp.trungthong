@@ -1,0 +1,329 @@
+.prog {
+    &-one {
+        &-side {
+            &-item {
+                width: calc(100% /2);
+                @include flex;
+                flex-direction: column;
+                justify-content: center;
+                @include max(768px) {
+                    width: 100%;
+                }
+            }
+        }
+        &-img {
+            position: absolute;
+            width: 50%;
+            bottom: 0;
+            left: 0;
+            @include max(768px) {
+                width: 100%;
+                position: relative;
+            }
+            &-inner {
+                @include imgPd(925, 1200);
+                img {
+                    @include imgContain;
+                }
+            }
+        }
+        &-wrapper {
+            border-radius: 2rem;
+            background-color: white;
+            @include shadown;
+            position: relative;
+            @include min($res-mobile-min) {
+                min-height: 60rem;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                @include full-second;
+                background-image: url(../assets/images/solu-br.jpg);
+                @include default-background;
+                pointer-events: none;
+                border-radius: inherit;
+            }
+        }
+        &-content {
+            padding: 4.8rem;
+            position: relative;
+            z-index: 2;
+            @include max($res-mobile) {
+                padding: 1.6rem;
+            }
+            .spc {
+                margin-top: 2.4rem;
+                &-item {
+                    @include max(768px) {
+                        width: 100%;
+                    }
+                }
+            }
+            .btn {
+                @include max(768px) {
+                    width: 100%;
+                }
+            }
+        }
+        &-des {
+            margin-top: 2.4rem;
+        }
+        &-logo {
+            width: 27.6rem;
+            height: 15rem;
+            @include max($res-mobile) {
+                width: 12.9rem;
+                height: 7rem;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    &-course {
+        margin-bottom: -2.4rem;
+        &-item {
+            width: calc(100% /2);
+            margin-bottom: 2.4rem;
+            @include max(768px) {
+                width: 100%;
+            }
+            &:nth-child(2n+1) {
+                .prog-course-name {
+                    color: #00A5E8;
+                    a {
+                        color: #00A5E8;
+                    }
+                }
+                .prog-course-wrap {
+                    &::before {
+                        @include br-blue;
+                    }
+                }
+            }
+            &:nth-child(2n+2) {
+                .prog-course-name {
+                    color: $color-second;
+                    a {
+                        color: $color-second;
+                    }
+                }
+                .prog-course-wrap {
+                    &::before {
+                        @include br-green;
+                    }
+                }
+            }
+        }
+        &-wrap {
+            border-radius: 2rem;
+            @include shadown;
+            @include flex;
+            flex-direction: column;
+            background-color: white;
+            height: 100%;
+            padding: 2.4rem;
+            padding-left: 5.4rem;
+            position: relative;
+            overflow: hidden;
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: -5%;
+                right: -5%;
+                width: 46%;
+                background-image: url(../assets/images/re-decor.svg);
+                @include default-background;
+                background-size: contain;
+                height: 100%;
+                pointer-events: none;
+                z-index: 1;
+            }
+            @include max(768px) {
+                padding: 1.6rem;
+                padding-left: 3.2rem;
+            }
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 2rem;
+                @include max(768px) {
+                    width: 1rem;
+                }
+            }
+        }
+        &-inner {
+            position: relative;
+            z-index: 2;
+        }
+        &-name {
+            font-weight: bold;
+            margin-bottom: 2.4rem;
+            @include fz-54-20;
+        }
+        &-des {
+            margin-bottom: 1.6rem;
+            margin-top: auto;
+        }
+    }
+    &-block {
+        padding: 4.8rem;
+        border-radius: 2rem;
+        @include shadown;
+        position: relative;
+        overflow: hidden;
+        &:not(:last-child) {
+            margin-bottom: 2.4rem;
+        }
+        &:nth-child(odd) {
+            &::before {
+                content: '';
+                position: absolute;
+                @include full-second;
+                background-image: url(../assets/images/prog-br-1.png);
+                @include default-background;
+            }
+        }
+        &:nth-child(even) {
+            &::before {
+                content: '';
+                position: absolute;
+                @include full-second;
+                background-image: url(../assets/images/prog-br-2.png);
+                @include default-background;
+            }
+            .prog-row {
+                flex-direction: row-reverse;
+            }
+        }
+    }
+    &-row {
+        align-items: center;
+        position: relative;
+        z-index: 2;
+    }
+    &-col {
+        &-left {
+            width: calc(100%*(5/12));
+            @include max(768px) {
+                width: 100%;
+                margin-bottom: 2.4rem;
+            }
+        }
+        &-right {
+            width: calc(100%*(7/12));
+            @include max(768px) {
+                width: 100%;
+                text-align: center
+            }
+        }
+    }
+    &-image {
+        @include imgPd(100, 100);
+        img {
+            @include imgContain;
+        }
+    }
+    &-name {
+        @include fz-54-20;
+        font-weight: bold;
+        color: $color-pri;
+        margin-bottom: 2.4rem
+    }
+    &-des {
+        @include fz-28-14;
+    }
+    &-second {
+        margin-top: -4rem;
+        padding-bottom: 9.6rem;
+        position: relative;
+        z-index: 4;
+        @include max($res-mobile) {
+            padding-bottom: 5.6rem;
+        }
+        &-wrapper {
+            padding: 12rem;
+            border-radius: 2rem;
+            @include shadown;
+            background-color: white;
+            @include max($res-mobile) {
+                padding: 4.8rem;
+            }
+            @include max(768px) {
+                padding: 1.6rem;
+            }
+        }
+        &-img {
+            &-inner {
+                margin: 0 auto;
+                width: 68%;
+                @include max($res-mobile) {
+                    width: 100%;
+                }
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+        &-quote {
+            border-radius: 2rem;
+            padding: 3.2rem 9.6rem;
+            background-color: #406FF0;
+            margin-top: -2rem;
+            position: relative;
+            z-index: 2;
+            @include max($res-mobile) {
+                padding: 2.4rem;
+            }
+            @include max(768px) {
+                padding: 1.6rem;
+            }
+            .text {
+                @include fz-28-14;
+                color: white;
+            }
+            margin-bottom: 4rem;
+        }
+        &-content {
+            padding: 4.8rem;
+            border-radius: 4rem;
+            border: 0.3rem dashed #406FF0;
+            @include max($res-mobile) {
+                padding: 2.4rem;
+            }
+            @include max(768px) {
+                padding: 1.6rem;
+            }
+            ul {
+                li {
+                    @include fz-28-14;
+                    position: relative;
+                    padding-left: 4rem;
+                    &:not(:last-child) {
+                        margin-bottom: 1.6rem;
+                    }
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: 1rem;
+                        left: 0;
+                        background-image: url(../assets/images/icon-tick.svg);
+                        width: 3rem;
+                        height: 3rem;
+                        @include default-background;
+                        background-size: contain;
+                        @include max($res-mobile) {
+                            width: 1.6rem;
+                            height: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

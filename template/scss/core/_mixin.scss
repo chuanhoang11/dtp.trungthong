@@ -241,3 +241,15 @@
 @mixin font-second {
     font-family: "Raleway", sans-serif;
 }
+
+@mixin shadown {
+    box-shadow: 0 1rem 2rem rgba($color: #505977, $alpha: 0.1);
+}
+
+@mixin br-blue {
+    background: linear-gradient(90deg, rgba(0, 166, 233, 1) 0%, rgba(0, 145, 215, 1) 50%, rgba(0, 166, 233, 1) 100%);
+}
+
+@mixin br-green {
+    background: linear-gradient(90deg, rgba(191, 215, 48, 1) 0%, rgba(128, 187, 56, 1) 50%, rgba(191, 215, 48, 1) 100%);
+}
