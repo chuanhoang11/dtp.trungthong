@@ -1,0 +1,213 @@
+.lh {
+    &-pop {
+        
+    }
+    &-head {
+        height: 12rem;
+        width: 100%;
+        background-color: #4640C9;
+        color: $color-white;
+        @include fz-48;
+        font-weight: 600;
+        @include mid-flex;
+        position: relative;
+        align-items: center;
+        border-radius: 2rem 2rem 0 0;
+        @include max(1200px) {
+            height: 6rem;
+            padding: 0 2rem;
+            @include fz-24;
+
+        }
+        &.cl {
+            background-color: #006CB7;
+        }
+        .decormobile {
+            position: absolute;
+            top: -5.3rem;
+            @include min(1200px) {
+                display: none;
+            }
+        }
+        .decor {
+            position: absolute;
+            top: -10.1rem;
+            @include max(1200px) {
+                display: none;
+            }
+        }
+        .logo {
+            position: absolute;
+            top: -8rem;
+            @include max(1200px) {
+                top: -4.5rem;
+                img {
+                    width: 6rem;
+                    height: 6rem;
+                }
+            }
+        }
+    }
+    &-form {
+        padding: 3rem 5rem 6rem 5rem;
+        max-height: 70vh;
+        overflow-y: auto;
+        background-color: $color-white;
+
+        @include max(1200px) {
+            padding: 2rem;
+        }
+        &-wr {
+            width: 100%;
+        }
+    }
+    &-ip {
+        width: 100%;
+        margin-bottom: 2rem;
+        @include max(500px) {
+            margin-bottom: 1rem;
+        }
+        &-txt {
+            color: $color-text;
+            margin-bottom: 0.9rem;
+            @include max(500px) {
+                margin-bottom: 0.5rem;
+            }
+        }
+        input {
+            border-radius: 2rem;
+            border: 0.2rem solid #B5B2ED;
+            width: 100%;
+            padding: 2rem 1.6rem;
+            outline: none;
+            @include font-pri;
+            @include fz-24;
+            min-height: 10rem;
+            @include max(1200px) {
+                min-height:5rem;
+                border-radius: 1rem;
+            }
+            @include max(500px) {
+                padding: 0.8rem 1rem;
+                border-radius: 0.8rem;
+            }
+        }
+        textarea {
+            border-radius: 1.2rem;
+            border: 0.2rem solid #B5B2ED;
+            width: 100%;
+            padding: 2rem 1.6rem;
+            outline: none;
+            min-height: 30rem;
+            resize: none;
+            @include font-pri;
+            @include fz-24;
+            @include max(1200px) {
+                min-height: 16rem;
+            }
+            @include max(500px) {
+                padding: 0.8rem 1rem;
+                border-radius: 0.8rem;
+            }
+        }
+    }
+    &-btn {
+        @include flex;
+        &-re {
+            padding: 2.3rem 10rem;
+            border-radius: 2rem;
+            border: 1px solid $color-border;
+            color: $color-text;
+            @include fz-28;
+            margin-left: auto;
+            cursor: pointer;
+            @include max(1200px) {
+                padding: 1rem 4rem;
+                border-radius: 100rem;
+            }
+            @include max(500px) {
+                padding: 1rem 2rem;
+            }
+        }
+        .btn-pp {
+            padding: 2.3rem 10rem;
+            border-radius: 2rem;
+            border: 1px solid #4640C9;
+            color: $color-text;
+            @include fz-28;
+            background-color: #4640C9;
+            margin-left: 2rem;
+            color: $color-white;
+            font-weight: 600;
+            cursor: pointer;
+            @include max(1200px) {
+                padding: 1rem 4rem;
+                border-radius: 100rem;
+            }
+            @include max(500px) {
+                margin-left: 0.5rem;
+                padding: 1rem 2rem;
+            }
+        }
+    }
+    &-content {
+        padding: 6rem;
+        max-height: 70vh;
+        overflow-y: auto;
+        background-color: $color-white;
+        @include max(1200px) {
+            padding: 2rem;
+        }
+        p {
+            margin: 1.5rem 0;
+            @include fz-28;
+        }
+    }
+    &-img {
+        position: relative;
+        padding-top: calc(505/867*100%);
+        background-color: #DDDDDD;
+        overflow: hidden;
+        border-radius: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+.popup.modify {
+    .popup-main {
+        border-radius: 1.6rem;
+        overflow: hidden;
+        width: calc((8/12*100%) - 8.8rem);
+        @include max(700px) {
+            width: 95%;
+        }
+    }
+    .popup-over {
+        max-height: 90vh;
+        overflow: visible;
+        &.pdtop {
+            padding-top: 10rem;
+        }
+    }
+    .popup-wrapper {
+        padding: 0;
+        background-color: transparent;
+    }
+    .popup-close {
+        background-color: transparent;
+        border: none;
+        right: 5rem;
+        top: 50%;
+        transform: translateY(-50%);
+        i {
+            font-weight: 500;
+            color: $color-white;
+            @include fz-48;
+            @include max(500px) {
+                @include fz-18;
+            }
+        }
+        @include max(1200px) {
+            right: 1rem;
+        }
+    }
+}
